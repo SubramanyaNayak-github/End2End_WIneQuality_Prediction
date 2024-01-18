@@ -1,0 +1,31 @@
+artifacts_root: artifacts
+
+
+# ------------------------------------------ Data_Ingestion ------------------------------------ 
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://github.com/SubramanyaNayak-github/Datasets/raw/main/winequality-data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+
+# ------------------------------------------ Data_Validation ------------------------------------ 
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/winequality-red.csv
+  status_file: artifacts/data_validation/status.txt
+
+
+# ------------------------------------------ Data_Validation ------------------------------------ 
+
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/winequality-red.csv
+
+
