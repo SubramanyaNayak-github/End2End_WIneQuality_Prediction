@@ -26,7 +26,7 @@ class DataValidationConfig:
 
 
 
-# ------------------------------------------ Data_Validation ------------------------------------
+# ------------------------------------------ Data_Transformation ------------------------------------
     
 dataclass(frozen=True)
 class DataTransformationConfig:
@@ -34,10 +34,19 @@ class DataTransformationConfig:
     data_path: Path
 
 
-# ------------------------------------------ Data_Transformation ------------------------------------ 
+# ------------------------------------------ Model_Trainer ------------------------------------ 
     
 
+
 @dataclass(frozen=True)
-class DataTransformationConfig:
-    root_dir: Path
-    data_path: Path
+class ModelTrainerConfig:
+    root_dir:Path
+    train_data_path: Path
+    test_data_path : Path
+    model_name: str
+    alpha: float
+    l1_ratio: float
+    target_column: str
+
+
+# ------------------------------------------ Model_Evaluation ------------------------------------ 
